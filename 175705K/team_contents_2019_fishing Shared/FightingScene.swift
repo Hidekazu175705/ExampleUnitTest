@@ -77,6 +77,7 @@ class FightingScene: GameSceneBase {
 
     override func nextScene() -> GameScene? {
         if state == .successful {
+            self.gameStatus.succeed=true
             return nil
         }else if state == .failed{
             self.visualizer.playSound(name: "MGS_!")
